@@ -7,6 +7,5 @@ An overview of what my portfolio site includes
 
 A section that lists the projects featured in my portfolio, with a brief description of each project’s features or purpose
 
-A link to my live site that is running through GitHub Pages: https://yourusername.github.io/final-project-portfolio/
 - [Github Repo](https://github.com/Jusulol/final-project)
-- [Live Website](https://Jusulol.github.io/Final-Project/)
+- [Live Website](ppppp)
