@@ -1,94 +1,82 @@
-/* Apply to all elements */
 * {
-    color: white; /* Set text color to white */
-    font-family: sans-serif; /* Use sans-serif font */
-    transition: 0.2s ease-in-out; /* Smooth transition for any changes */
-    user-select: none; /* Prevent text selection */
+    color: white;
+    font-family: sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
 }
 
-/* Centering elements */
 .align {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Styling the body */
 body {
-    background-color: #252A34; /* Dark background */
+    background-color: #252A34;
     margin: 0;
     padding: 0;
-    width: 100vw; /* Full width */
-    text-align: center; /* Center text */
-    padding-top: 5vh; /* Space at the top */
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
 }
 
-/* Turn display container */
 .turn-container {
     width: 170px;
     height: 80px;
-    margin: auto; /* Center horizontally */
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    grid-template-rows: 1fr 1fr; /* Two equal rows */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     position: relative;
 }
 
-/* Heading inside turn container */
 .turn-container h3 {
     margin: 0;
     grid-column-start: 1;
-    grid-column-end: 3; /* Span across both columns */
+    grid-column-end: 3;
 }
 
-/* Styling for X and O boxes in turn display */
 .turn-container .turn-box {
     border: 3px solid #000;
     font-size: 1.6rem;
     font-weight: 700;
 }
 
-/* Remove right border from the second box */
 .turn-container .turn-box:nth-child(even) {
     border-right: none;
 }
 
-/* Background highlight for the active turn */
 .bg {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 85px;
     height: 40px;
-    background-color: #FF2E63; /* Red highlight */
-    z-index: -1; /* Place behind other elements */
+    background-color: #FF2E63;
+    z-index: -1;
 }
 
-/* Main Tic-Tac-Toe grid */
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3x3 grid */
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     height: 250px;
     width: 250px;
-    margin: 30px auto; /* Center the grid */
+    margin: 30px auto;
     border: 2px solid #000;
 }
 
-/* Individual grid boxes */
 .box {
-    cursor: pointer; /* Show pointer cursor */
+    cursor: pointer;
     font-size: 2rem;
     font-weight: 700;
     border: 2px solid #000;
 }
 
-/* Hover effect on boxes */
 .box:hover {
-    background-color: #FF2E63; /* Change color on hover */
+    background-color: #FF2E63;
 }
 
-/* Play Again button styling */
 #play-again {
     background-color: #FF2E63;
     padding: 10px 25px;
@@ -96,17 +84,15 @@ body {
     font-size: 1.2rem;
     border-radius: 5px;
     cursor: pointer;
-    display: none; /* Initially hidden */
+    display: none;
 }
 
-/* Hover effect for Play Again button */
 #play-again:hover {
-    padding: 10px 40px; /* Expand size */
-    background-color: #08D9D6; /* Change background */
-    color: #000; /* Change text color */
+    padding: 10px 40px;
+    background-color: #08D9D6;
+    color: #000;
 }
 
-/* Timer styling */
 #timer {
     font-size: 1.5rem;
     color: #FF2E63;
