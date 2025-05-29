@@ -8,4 +8,4 @@ An overview of what my portfolio site includes
 A section that lists the projects featured in my portfolio, with a brief description of each project’s features or purpose
 
 - [Github Repo](https://github.com/Jusulol/final-project)
-- [Live Website](ppppp)
+- [Live Website](https://jusulol.github.io/final-project/)
