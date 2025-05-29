@@ -3,7 +3,7 @@
 <head>
 <title>Click Speed Game</title>
 <style type="text/css">
-  /* Basic styling for the page */
+
   body {
     background-color: black;
     color: white;
@@ -11,7 +11,6 @@
     text-align: center;
   }
 
-  /* Styling for the content box displaying timer and CPS */
   #content {
     width: 250px;
     border: 2px solid #ff0000;
@@ -23,8 +22,7 @@
     background-color: rgba(255, 0, 0, 0.2);
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
   }
-  
-  /* Styling for the click area */
+
   #clickarea {
     width: 500px;
     height: 300px;
@@ -40,7 +38,7 @@
     cursor: pointer;
   }
   
-  /* Styling for the start button */
+
   #start {
     position: absolute;
     top: 50%; left: 50%;
@@ -58,12 +56,12 @@
     transition: 0.2s;
   }
 
-  /* Button hover effect */
+
   #start:hover {
     background: linear-gradient(145deg, #ff4d4d, #cc0000);
   }
 
-  /* Button click effect */
+
   #start:active {
     box-shadow: 0 2px #990000;
     transform: translate(-50%, -48%);
@@ -71,76 +69,74 @@
 </style>
 </head>
 <body>
-  <!-- Displaying the timer and click speed -->
+
   <div id="content">
     <p>Timer: <span id="timer">0.000</span></p>
     <p>CPS: <span id="cps">0.00</span></p>
   </div>
   
-  <!-- Clickable area for the game -->
+ 
   <div id="clickarea">
     <button id="start">Start</button>
   </div>
   
   <script type="text/javascript">
-    var cps = 0; // Clicks per second count
-    var duration = 10; // Game duration in seconds
-    var startTime; // Stores the start time of the game
-    var ended = true; // Tracks whether the game is active
+    var cps = 0; 
+    var duration = 10;
+    var startTime;
+    var ended = true; 
     var timerTxt = document.getElementById("timer");
     var cpsTxt = document.getElementById("cps");
     var startBtn = document.getElementById("start");
     var clickArea = document.getElementById("clickarea");
 
-    // Function to show an element
+
     function show(elem) {
       elem.style.display = 'inline';
     }
 
-    // Function to hide an element
+
     function hide(elem) {
       elem.style.display = 'none';
     }
 
-    // Function to start the game
     function startGame() {
-      hide(startBtn); // Hide the start button
-      cps = 0; // Reset click count
-      ended = false; // Set game as active
-      startTime = new Date().getTime(); // Record start time
+      hide(startBtn); 
+      cps = 0; 
+      ended = false; 
+      startTime = new Date().getTime();
 
       var timerId = setInterval(function() {
-        var total = (new Date().getTime() - startTime) / 1000; // Calculate elapsed time
+        var total = (new Date().getTime() - startTime) / 1000; 
 
         if (total < duration) {
-          timerTxt.textContent = total.toFixed(3); // Update timer display
-          cpsTxt.textContent = (cps / total).toFixed(2); // Update CPS display
+          timerTxt.textContent = total.toFixed(3);
+          cpsTxt.textContent = (cps / total).toFixed(2); 
         } else {
-          ended = true; // Mark game as ended
-          clearInterval(timerId); // Stop the timer
+          ended = true; 
+          clearInterval(timerId);
           endGame();
         }
       }, 10);
     }
 
-    // Function to end the game
+
     function endGame() {
-      var cpsFinal = (cps / duration).toFixed(2); // Calculate final CPS
-      timerTxt.textContent = duration.toFixed(3); // Set final time
-      cpsTxt.textContent = cpsFinal; // Display final CPS
-      show(startBtn); // Show start button again
+      var cpsFinal = (cps / duration).toFixed(2); 
+      timerTxt.textContent = duration.toFixed(3); 
+      cpsTxt.textContent = cpsFinal;
+      show(startBtn); 
     }
 
-    // Event listener for start button click
     startBtn.addEventListener("click", function() {
       startGame();
     });
 
-    // Event listener for clicking within the game area
+  
     clickArea.addEventListener("click", function() {
       if (!ended) {
-        cps++; // Increment click count
-        cpsTxt.textContent = cps; // Update CPS display
+        cps++;
+        cpsTxt.textContent = cps; 
       }
     });
   </script>
