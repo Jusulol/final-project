@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minesweeper</title>
     <style>
-        /* General styling */
+
         body {
             background-color: white;
             color: #c0c0c0;
@@ -17,7 +17,6 @@
             margin: 0;
         }
 
-        /* Title screen */
         #introScreen {
             display: flex;
             justify-content: center;
@@ -52,7 +51,7 @@
             transform: scale(1.1);
         }
 
-        /* Game container */
+
         #game-container {
             display: none;
             text-align: center;
@@ -113,14 +112,12 @@
 </head>
 <body>
 
-    <!-- Title Screen -->
     <div id="introScreen">
         <h1>MineSweeping!</h1>
         <p>right click to place flag (i hope it works)</p>
         <button id="startButton">Start Game</button>
     </div>
 
-    <!-- Game Container -->
     <div id="game-container">
         <h1>Minesweeper</h1>
         <button class="restart" onclick="restartGame()">Restart Game</button>
@@ -136,11 +133,10 @@
         let gameOver = false;
         let firstClick = true;
 
-        // Function to start the game (hides title screen and shows game)
         document.getElementById("startButton").addEventListener("click", function() {
-            document.getElementById("introScreen").style.display = "none"; // Hide title screen
-            document.getElementById("game-container").style.display = "block"; // Show game
-            createBoard(); // Start game
+            document.getElementById("introScreen").style.display = "none"; 
+            document.getElementById("game-container").style.display = "block"; 
+            createBoard(); 
         });
 
         function getRandomCell() {
