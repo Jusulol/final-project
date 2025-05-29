@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic_Tac_Toe</title>
-    <link rel="stylesheet" href="project1.css"> <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="project1.css"> <!-- Link to external CSS -->
 </head>
 <body>
-    <!-- Section for displaying which player's turn it is -->
+    <!-- Turn Indicator -->
     <div class="turn-container">
-        <h3>Turn For</h3>  <!-- Heading indicating whose turn it is -->
-        <div class="turn-box align">X</div> <!-- Box representing Player X -->
-        <div class="turn-box align">O</div> <!-- Box representing Player O -->
-        <div class="bg"></div> <!-- Background element (probably for styling purposes) -->
+        <h3>Turn For</h3>
+        <div class="turn-box align">X</div>
+        <div class="turn-box align">O</div>
+        <div class="bg"></div>
     </div>
 
-    <!-- Main game board (3x3 grid for Tic Tac Toe) -->
+    <!-- Game Grid -->
     <div class="main-grid">
-        <div class="box align">0</div> <!-- Each box represents a cell in the Tic Tac Toe grid -->
+        <div class="box align">0</div>
         <div class="box align">1</div>
         <div class="box align">2</div>
         <div class="box align">3</div>
@@ -29,14 +29,16 @@
         <div class="box align">8</div>
     </div>
 
-    <!-- Timer to track the game duration or player turns -->
-    <h3 id="timer">30s</h3> 
+    <!-- Timer -->
+    <h3 id="timer">30s</h3>
 
-    <!-- Display the game result (Winner or Draw) -->
-    <h2 id="results"></h2> 
+    <!-- Result Message -->
+    <h2 id="results"></h2>
 
-    <!-- Button to restart the game -->
+    <!-- Restart Button -->
     <button id="play-again">Play Again</button>
+
+    <!-- Link to JavaScript -->
+    <script src="project1.js"></script>
 </body>
 </html>
-
