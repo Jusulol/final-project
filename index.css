@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -140,4 +140,4 @@ footer {
   h1 {
     font-size: 1.5rem;
   }
-
+}
